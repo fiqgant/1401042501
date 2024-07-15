@@ -312,6 +312,13 @@
 </body>
 <!-- partial -->
   <script  src="./script.js"></script>
-
+  <script>
+    window.addEventListener('load', () => {
+      const audio = document.getElementById('background-audio');
+      audio.play().catch(error => {
+        console.log('Audio playback failed: ', error);
+      });
+    });
+  </script>
 </body>
 </html>
