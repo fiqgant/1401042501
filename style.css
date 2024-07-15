@@ -984,3 +984,26 @@ body {
 .not-loaded * {
   animation-play-state: paused !important;
 }
+
+#start-button {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #6bf0ff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.not-loaded #start-button {
+  display: block;
+}
+
+#start-button.hidden {
+  display: none;
+}
