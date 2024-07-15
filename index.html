@@ -312,13 +312,19 @@
 </body>
 <!-- partial -->
   <script  src="./script.js"></script>
-  <script>
-    window.addEventListener('load', () => {
-      const audio = document.getElementById('background-audio');
-      audio.play().catch(error => {
-        console.log('Audio playback failed: ', error);
-      });
-    });
-  </script>
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('background-audio');
+    
+    document.body.addEventListener('mouseover', () => {
+      if (audio.paused) {
+        audio.play().catch(error => {
+          console.log('Audio playback failed: ', error);
+        });
+      }
+    }, { once: true });
+  });
+</script>
+
 </body>
 </html>
